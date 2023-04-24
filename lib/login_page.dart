@@ -1,13 +1,6 @@
-// Flutter imports:
-
-// Flutter imports:
 import 'package:flutter/material.dart';
-
-// Package imports:
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:video_call_demo/constant.dart';
 import 'package:video_call_demo/utils.dart';
-
 import 'login_service.dart';
 
 class LoginPage extends StatefulWidget {
