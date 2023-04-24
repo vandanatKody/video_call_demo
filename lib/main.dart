@@ -59,6 +59,7 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: routes,
+      debugShowCheckedModeBanner: false,
       initialRoute:
       currentUser.id.isEmpty ? PageRouteNames.login : PageRouteNames.home,
       theme: ThemeData(scaffoldBackgroundColor: const Color(0xFFEFEFEF)),

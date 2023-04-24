@@ -86,50 +86,24 @@ class HomePageState extends State<HomePage> {
       child: ListView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
-        itemCount: 10,
+        itemCount: 1,
         itemBuilder: (context, index) {
           late TextEditingController inviteeUsersIDTextCtrl;
           late List<Widget> userInfo;
-          if (0 == index) {
-            inviteeUsersIDTextCtrl = singleInviteeUserIDTextCtrl;
-            userInfo = [
-              const Text('invitee name ('),
-              InviteeIDFormField(
-                textCtrl: inviteeUsersIDTextCtrl,
-                formatters: [
-                  FilteringTextInputFormatter.allow(RegExp('[0-9,]')),
-                ],
-                labelText: "invitee ID",
-                hintText: "plz enter invitee ID",
-              ),
-              const Text(')'),
-            ];
-          } else if (1 == index) {
-            inviteeUsersIDTextCtrl = groupInviteeUserIDsTextCtrl;
-            userInfo = [
-              const Text('group name ('),
-              InviteeIDFormField(
-                textCtrl: inviteeUsersIDTextCtrl,
-                formatters: [
-                  FilteringTextInputFormatter.allow(RegExp('[0-9,]')),
-                ],
-                labelText: "invitees ID",
-                hintText: "separate IDs by ','",
-              ),
-              const Text(')'),
-            ];
-          } else {
-            inviteeUsersIDTextCtrl = TextEditingController();
-            userInfo = [
-              Text(
-                '${faker.person.firstName()}(${random.fromPattern([
-                  '######'
-                ])})',
-                style: textStyle,
-              )
-            ];
-          }
 
+          inviteeUsersIDTextCtrl = singleInviteeUserIDTextCtrl;
+          userInfo = [
+            const Text('invitee name ('),
+            InviteeIDFormField(
+              textCtrl: inviteeUsersIDTextCtrl,
+              formatters: [
+                FilteringTextInputFormatter.allow(RegExp('[0-9,]')),
+              ],
+              labelText: "invitee ID",
+              hintText: "plz enter invitee ID",
+            ),
+            const Text(')'),
+          ];
           return Column(
             children: [
               Row(
