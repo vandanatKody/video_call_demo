@@ -1,7 +1,4 @@
-// Flutter imports:
 import 'package:flutter/material.dart';
-
-// Package imports:
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:video_call_demo/constant.dart';
 import 'package:video_call_demo/login_service.dart';
@@ -18,10 +15,10 @@ void main() async {
     currentUser.name = 'user_$cacheUserID';
   }
 
-  /// 1/5: define a navigator key
+  ///define a navigator key
   final navigatorKey = GlobalKey<NavigatorState>();
 
-  /// 2/5: set navigator key to ZegoUIKitPrebuiltCallInvitationService
+  ///set navigator key to ZegoUIKitPrebuiltCallInvitationService
   ZegoUIKitPrebuiltCallInvitationService().setNavigatorKey(navigatorKey);
 
   ZegoUIKit().initLog().then((value) {
@@ -64,7 +61,7 @@ class MyAppState extends State<MyApp> {
       currentUser.id.isEmpty ? PageRouteNames.login : PageRouteNames.home,
       theme: ThemeData(scaffoldBackgroundColor: const Color(0xFFEFEFEF)),
 
-      /// 3/5: register the navigator key to MaterialApp
+      ///register the navigator key to MaterialApp
       navigatorKey: widget.navigatorKey,
       builder: (BuildContext context, Widget? child) {
         return Stack(

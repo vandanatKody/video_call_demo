@@ -1,4 +1,3 @@
-// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:video_call_demo/HomePage.dart';
 import 'package:video_call_demo/login_page.dart';

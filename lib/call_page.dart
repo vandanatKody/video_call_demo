@@ -1,8 +1,5 @@
-// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-// Package imports:
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:video_call_demo/constant.dart';
 import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
