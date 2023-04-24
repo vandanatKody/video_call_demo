@@ -79,8 +79,6 @@ class HomePageState extends State<HomePage> {
   }
 
   Widget userListView() {
-    final RandomGenerator random = RandomGenerator();
-    final Faker faker = Faker();
 
     return Center(
       child: ListView.builder(
